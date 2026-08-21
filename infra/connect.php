@@ -1,13 +1,21 @@
 <?php
 
-$host = "localhost";
-$user = "root";
-$password = "";
-$database = "crud_aula";
+    $host = "localhost";
+    $user = "root";
+    $password = "root";
+    $database = "crud_aula";
 
-$conn = new mysqli($host, $user, $password, $database);
+    $conexao = new mysqli($host, $user, $password, $database);
 
-if ($conn->connect_error) {
-    die("Erro na conexão: " . $conn->connect_error);
-};
+    if ($conexao->connect_error){
+        die("Erro na conexao co o banco: ".  $conexao-> connect_error);
+
+    };
+
+    $conexao->set_charset("utf8mb4");
+
+
+
+
+
 ?>
